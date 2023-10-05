@@ -7,7 +7,7 @@ while True:
         continue
     break
 
-lastHour = 3600 // n
+lastHour = n % 3600
 print(f"Колличество секунд: {lastHour}")
 
 
