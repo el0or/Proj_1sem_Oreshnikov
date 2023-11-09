@@ -9,8 +9,11 @@ def length(A, B):
     return remaining_length
 
 # Введите значения A и B
-A = int(input("Введите положительное число A: "))
-B = int(input("Введите положительное число B (меньше A): "))
+try:
+    A = int(input("Введите положительное число A: "))
+    B = int(input("Введите положительное число B (меньше A): "))
+except ValueError:
+    print("Введите положительное число!")
 
 if A > 0 and B > 0 and A > B:
     result = length(A, B)
