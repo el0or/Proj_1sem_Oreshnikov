@@ -1,18 +1,23 @@
-def cyclic_shift(A, K):
-    N = len(A)
-    K %= N  # Предотвращаем выход K за пределы длины списка
-
-    # Создаем вспомогательный список B из 4 элементов
-    B = A[N-K:] + A[:N-K]
-
-    # Копируем элементы из списка B в список A
-    for i in range(N):
-        A[i] = B[i]
-
-    return A
+#Дан список размера N, все элементы которого, кроме первого, упорядочены по
+#возрастанию. Сделать список упорядоченным, переместив первый элемент на новую
+#позицию.
+def order_list(lst):
+    # Проверка наличия элементов в списке
+    if len(lst) > 1:
+        # Перемещение первого элемента на новую позицию
+        first_element = lst.pop(0)
+        lst.insert(1, first_element)
+        # Сортировка списка
+        lst.sort()
+    return lst
 
 # Пример использования функции
-A = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-K = 2
-result = cyclic_shift(A, K)
-print(result)
+N = int(input("Введите размер списка N: "))
+my_list = []
+
+for i in range(N):
+    element = int(input(f"Введите элемент {i + 1}: "))
+    my_list.append(element)
+
+result = order_list(my_list)
+print("Упорядоченный список:", result)
