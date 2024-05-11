@@ -10,3 +10,4 @@ def find_lenght(stroka):
 # Пример использования
 stroka = "Дана строка, состоящая из русских слов"
 print(find_lenght(stroka))
+

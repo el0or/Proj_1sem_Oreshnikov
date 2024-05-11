@@ -1,4 +1,4 @@
-import random
+from random import random
 # Описать функцию PowerA3(A, B), вычисляющую третью степень числа A и
 # возвращающую ее в переменную B (A — входной, B — выходной параметр; оба
 # параметра являются вещественными). С помощью этой функции найти третьи
@@ -10,4 +10,4 @@ def PowerA3(A):
 
 
 for i in range(5):
-    print(PowerA3(random.random()))
+    print(PowerA3(random()))

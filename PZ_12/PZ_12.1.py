@@ -1,11 +1,13 @@
-#.В последовательности на n целых чисел умножить все элементы на последний
+#В последовательности на n целых чисел умножить все элементы на последний
 #минимальный элемент.
 n = int(input("Введите количество элементов в последовательности: "))
 sequence = []
 
-for i in range(n):
-    num = int(input(f"Введите {i+1}-й элемент: "))
-    sequence.append(num)
+# for i in range(n):
+#     num = int(input(f"Введите {i+1}-й элемент: "))
+#     sequence.append(num)
+
+sequence = [int(input(f"Введите {i+1}-й элемент: ")) for i in range(n)]
 
 min_element = min(sequence)
 

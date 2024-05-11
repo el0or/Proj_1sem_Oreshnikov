@@ -6,18 +6,11 @@ def order_list(lst):
     if len(lst) > 1:
         # Перемещение первого элемента на новую позицию
         first_element = lst.pop(0)
-        lst.insert(1, first_element)
-        # Сортировка списка
+        lst.insert(1, first_element)# Сортировка списка
         lst.sort()
     return lst
 
-# Пример использования функции
-N = int(input("Введите размер списка N: "))
-my_list = []
-
-for i in range(N):
-    element = int(input(f"Введите элемент {i + 1}: "))
-    my_list.append(element)
+my_list = [3, 2, 4, 6, 8]
 
 result = order_list(my_list)
-print("Упорядоченный список:", result)
+print(f"Упорядоченный список: {result}")

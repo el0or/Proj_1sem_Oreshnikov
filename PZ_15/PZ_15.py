@@ -96,4 +96,3 @@ def get_worker():
 #     print(result)
 
 con.close()
-
