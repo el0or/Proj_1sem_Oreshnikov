@@ -1,6 +1,7 @@
 #В матрице найти сумму элементов первых двух строк.
 from functools import reduce
 import random
+
 # Создание матрицы
 n = 3
 matrix = [[random.randint(1, 20) for _ in range(n)] for _ in range(n)]
